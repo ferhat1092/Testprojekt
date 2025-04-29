@@ -1,20 +1,63 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QuizApp</title>
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+
     <script src="script.js"></script>
+
 </head>
-<body>
-    <h1>hallo welt</h1>
-    <div class="card">
-        <div class="card-body">
-          This is some text within a card body.
+
+<body onload="init()">
+
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+            <span class="navbar-text">
+                QuizApp
+            </span>
         </div>
-      </div>
-    <button class="btn btn-primary">action</button>
+    </nav>
+
+    <div class="container">
+
+        <div class="card quiz-card">
+            <img class="card-img" src="img/logo.png" alt="logo">
+            <div class="card-body">
+                <h5 class="card-title" id="question">Frage</h5>
+                <div class="card mb-1 hover-shadow">
+                    <div class="card-body" id="answer_1">
+                        Antwort
+                    </div>
+                </div>
+                <div class="card mb-1 hover-shadow">
+                    <div class="card-body" id="answer_2">
+                        Antwort
+                    </div>
+                </div>
+                <div class="card mb-1 hover-shadow">
+                    <div class="card-body" id="answer_3">
+                        Antwort
+                    </div>
+                </div>
+                <div class="card mb-1 hover-shadow">
+                    <div class="card-body" id="answer_4">
+                        Antwort
+                    </div>
+                </div>
+                <div class="question-footer">
+                    <span>
+                        <b>1</b> von <b id="count"></b>
+                    </span>
+                    <button class="btn btn-primary">nächste Frage</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
 </body>
+
 </html>
