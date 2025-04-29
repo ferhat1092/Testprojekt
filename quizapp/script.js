@@ -61,8 +61,8 @@ function render() {
 function answer(indexAnswer) {
     let question = questions[currentQuestion];
     if(indexAnswer !== question['correct']){
-        document.getElementById(indexAnswer).classList.toggle('bg-danger');
+        document.getElementById(indexAnswer).parentElement.classList.toggle('bg-danger');
     } else {
-        document.getElementById(indexAnswer).classList.toggle('bg-success');
+        document.getElementById(indexAnswer).parentElement.classList.toggle('bg-success');
     };
 };
