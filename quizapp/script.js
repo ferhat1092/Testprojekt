@@ -60,9 +60,20 @@ function render() {
 
 function answer(indexAnswer) {
     let question = questions[currentQuestion];
-    if(indexAnswer !== question['correct']){
+    let idOfRightAnswer = question['correct'];
+    if (indexAnswer !== idOfRightAnswer) {
         document.getElementById(indexAnswer).parentElement.classList.toggle('bg-danger');
+        document.getElementById(idOfRightAnswer).parentElement.classList.toggle('bg-success');
     } else {
         document.getElementById(indexAnswer).parentElement.classList.toggle('bg-success');
+    };
+
+    unchangeable();
+};
+
+function unchangeable() {
+    let removeOnclick = document.getElementsByClassName('card-body');
+    for (let indexRemove = 0; indexRemove < removeOnclick.length; indexRemove++) {
+        removeOnclick[indexRemove].onclick = null;
     };
 };
